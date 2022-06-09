@@ -1,19 +1,23 @@
 .list_page_container {
     width: 100vw;
     height: 100vh;
-    display: flex;
+    margin-top: 15%;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .list_container {
-    width: 80%;
+    width: 100%;
     height: 80%;
     border: 1px solid white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .list_component_container {
-    width: 45%;
-    height: 50%;
-    border: 1px solid white;
+    width: 30%;
+    height: 70%;
+    margin-bottom: 2%;
 }

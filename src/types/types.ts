@@ -5,6 +5,6 @@ export interface Voucher {
     hotelName?: string;
     price?: number;
     // discountedPrice?: string;
-    // voucherImageUrl?: string;
-    // voucherUrl?: string;
+    voucherImageUrl?: string;
+    voucherUrl?: string;
 }
