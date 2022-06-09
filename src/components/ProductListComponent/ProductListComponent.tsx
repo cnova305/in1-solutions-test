@@ -1,9 +1,18 @@
 import React from 'react';
 import './ProductListComponent.css';
 
-const ProductListComponent = () => {
+import { Voucher } from '../../types/types';
+
+interface ProductListComponentProps {
+  voucher: Voucher;
+}
+
+const ProductListComponent = ({
+  voucher,
+  ...props
+}:ProductListComponentProps) => {
   return (
-    <div>ProductListComponent</div>
+    <div>{voucher.name}</div>
   )
 }
 

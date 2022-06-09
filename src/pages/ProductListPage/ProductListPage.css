@@ -1,0 +1,19 @@
+.list_page_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list_container {
+    width: 80%;
+    height: 80%;
+    border: 1px solid white;
+}
+
+.list_component_container {
+    width: 45%;
+    height: 50%;
+    border: 1px solid white;
+}
