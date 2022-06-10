@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProductListComponent.css';
 
 import { Voucher, variant } from '../../types/types';
@@ -12,11 +13,16 @@ const ProductListComponent = ({
   ...props
 }:ProductListComponentProps) => {
 
+  const navigator = useNavigate();
+
   const [current, setCurrent] = useState(0);
   const length = voucher.variants?.length;
 
-  
-  
+
+  function selectVariant(e: React.ChangeEvent<HTMLSelectElement>) {
+    setCurrent(Number(e.target.value))
+  }
+
   return (
     
     <>
@@ -24,9 +30,9 @@ const ProductListComponent = ({
         <div className='list_component_block'>
           {/* <img src={voucher.voucherImageUrl} alt='voucher diagram' /> */}
           <div className='list_component_block_details'>
-            <div className='list_component_block_details_variant_container'>
-
-            </div>
+            <h1>
+              {voucher.name}
+            </h1>
           </div>
           <div className='list_component_block_price'>
               <div className='list_component_block_price_container'>
@@ -34,7 +40,11 @@ const ProductListComponent = ({
                   <span className='list_component_block_price_container_currency'>{voucher.currency}</span>
                   <span className='list_component_block_price_container_price'>{voucher.displayPrice}</span>
                 </div>
-                <div className='list_component_block_price_container_button'></div>
+                <div onClick={() => {
+                  navigator(`/product/${voucher.id?.toString()}`)
+                }} className='list_component_block_price_container_button'>
+
+                </div>
                 
               </div>
           </div>
@@ -51,11 +61,11 @@ const ProductListComponent = ({
                     {/* <img src={voucher.voucherImageUrl} alt='voucher diagram' /> */}
                     <div className='list_component_block_details'>
                       <div className='list_component_block_details_variant_container'>
-                        <select>
+                        <select onChange={selectVariant}>
                           {voucher.variants &&
                             voucher.variants.map((variantselector, index) => {
                               return (
-                                <option key={`variant-${index}`}>
+                                <option value={index} key={`variant-${index}`}>
                                   {variantselector.name}
                                 </option>
                               )
