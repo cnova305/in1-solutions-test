@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ProductListComponent.css';
 
-import { Voucher, variant } from '../../types/types';
+import { Voucher } from '../../types/types';
 
 interface ProductListComponentProps {
   voucher: Voucher;

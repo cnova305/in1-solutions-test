@@ -41,7 +41,6 @@ const ProductPage = () => {
   }, []);
 
   const currentVoucher = voucherList.find(voucher => voucher.id === Number(id)) || voucherData
-  console.log(currentVoucher)
 
   return (
     <div className='product_page_container'>

@@ -1,7 +1,9 @@
 import React from 'react';
 import './ProductPageComponent.css';
 
-import { Voucher, variant } from '../../types/types';
+
+
+import { Voucher } from '../../types/types';
 
 interface ProductPageComponentProps {
   voucher: Voucher;
@@ -11,6 +13,7 @@ const ProductPageComponent = ({
   voucher,
   ...props
 }:ProductPageComponentProps) => {
+  
   return (
     <div className='page_component_block'>
       <div className='page_component_block_hotel'>
@@ -34,7 +37,19 @@ const ProductPageComponent = ({
             <span className='page_component_block_details_price_title_cents'>
               .00
             </span>
-
+          </div>
+        </div>
+      </div>
+      <div className='page_component_block_actions'>
+        <div className='page_component_block_actions_block'>
+          <div className='page_component_block_actions_block_item'>
+            <span>Buy Now</span>
+          </div>
+          <div className='page_component_block_actions_block_item'>
+            <span>Add to Cart</span>
+          </div>
+          <div className='page_component_block_actions_block_item'>
+            <span>Buy in Bulk</span>
           </div>
 
         </div>

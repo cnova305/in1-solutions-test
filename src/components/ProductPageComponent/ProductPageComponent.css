@@ -20,12 +20,12 @@
 
 .page_component_block_details {
     width: 100%;
-    /* border: 1px solid black; */
+    border: 1px solid red;
 }
 
 .page_component_block_details_price {
     width: 48%;
-    border: 1px solid white;
+    border: 1px solid black;
 }
 
 .page_component_block_details_price h1 {
@@ -68,4 +68,24 @@
 
 .page_component_block_details_price_title_cents {
     font-size: 80%;
+}
+
+.page_component_block_actions {
+    border: 1px solid blue;
+}
+
+.page_component_block_actions {
+    border: 1px solid blue;
+}
+
+.page_component_block_actions_block_item {
+    background: var(--color-secondary);
+    width: 48%;
+    padding: 2%;
+    margin-bottom: 1%;
+    color: #ffffff;
+}
+
+.page_component_block_actions_block_item span {
+    font-family: var(--font-family);
 }
