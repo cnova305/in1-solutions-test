@@ -1,7 +1,7 @@
 export interface Voucher {
     id?: number;
     name?: string;
-    description?: string;
+    description: string;
     hotelName?: string;
     price?: number;
     // discountedPrice?: string;

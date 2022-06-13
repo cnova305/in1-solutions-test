@@ -1,6 +1,8 @@
 import React from 'react';
 import './ProductPageComponent.css';
 
+// import ReactHtmlParser from 'react-html-parser';
+
 
 
 import { Voucher } from '../../types/types';
@@ -39,6 +41,9 @@ const ProductPageComponent = ({
             </span>
           </div>
         </div>
+        <div className='page_component_block_details_image'>
+        <img src={`${voucher.voucherImageUrl}?auto=compress&h=200`} alt='voucher diagram' />
+        </div>
       </div>
       <div className='page_component_block_actions'>
         <div className='page_component_block_actions_block'>
@@ -51,9 +56,12 @@ const ProductPageComponent = ({
           <div className='page_component_block_actions_block_item'>
             <span>Buy in Bulk</span>
           </div>
-
         </div>
-
+      </div>
+      <div>
+      <div className='page_component_block_description'>
+        <div dangerouslySetInnerHTML={{__html: voucher.description}} />
+      </div>
       </div>
     </div>
   )

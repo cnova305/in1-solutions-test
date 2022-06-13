@@ -19,13 +19,21 @@
 }
 
 .page_component_block_details {
+    padding-top: 5%;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.page_component_block_details_image {
+    width: 48%
 }
 
 .page_component_block_details_price {
     width: 48%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .page_component_block_details_price h1 {
@@ -70,14 +78,6 @@
     font-size: 80%;
 }
 
-.page_component_block_actions {
-    border: 1px solid blue;
-}
-
-.page_component_block_actions {
-    border: 1px solid blue;
-}
-
 .page_component_block_actions_block_item {
     background: var(--color-secondary);
     width: 48%;
@@ -88,4 +88,11 @@
 
 .page_component_block_actions_block_item span {
     font-family: var(--font-family);
+}
+
+.page_component_block_description {
+    padding-top: 5%;
+    font-family: var(--font-family);
+    font-size: 120%;
+    color: #757575;
 }
